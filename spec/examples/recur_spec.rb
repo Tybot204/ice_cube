@@ -125,7 +125,7 @@ describe :next_occurrence do
     schedule.add_recurrence_rule(Rule.hourly(interval=4))
 
     Timecop.freeze(start_time) do
-      schedule.next_occurrence(schedule.start_time).should == expected_next_time
+      expect(schedule.next_occurrence(schedule.start_time)).to eq(expected_next_time)
     end
   end
 end

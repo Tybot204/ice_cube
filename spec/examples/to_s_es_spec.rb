@@ -203,7 +203,7 @@ describe IceCube::Schedule, 'to_s' do
   # it 'should work when an end_time is set' do
   #   schedule = IceCube::Schedule.new(Time.local(2012, 8, 31), :end_time => Time.local(2012, 10, 31))
   #   schedule.add_recurrence_rule IceCube::Rule.daily.count(2)
-  #   schedule.to_s.should == 'Diariamente 2 veces, hasta el 31 de Octubre 2012'
+  #   expect(schedule.to_s).to eq('Diariamente 2 veces, hasta el 31 de Octubre 2012')
   # end
 
 end
